@@ -1,1 +1,4 @@
-# user-data-magnolia
+Add this to your Page Template:
+
+`userData:
+    id: challenge-module:components/userData`

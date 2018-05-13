@@ -1,0 +1,81 @@
+'test-user': 
+  'email': ''
+  'enabled': true
+  'jcrName': 'test-user'
+  'language': 'en'
+  'name': 'test-user'
+  'pswd': '$2a$12$Tp1zIKeubbwtOD8QTDx.ZeqMCZLLcnpNoSvO40wL.1GfbaJvda5Pi'
+  'title': ''
+  jcr:primaryType: 'mgnl:user'
+  jcr:uuid: 'dd1a946a-34e1-4dc5-9250-a95e9829f86a'
+  mgnl:created: 2018-05-12T18:51:46.949+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastModified: 2018-05-12T18:52:29.065+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  'acl_users': 
+    jcr:uuid: '66f68091-99fa-4a01-953e-c834d240668d'
+    mgnl:created: 2018-05-12T18:51:47.282+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-12T18:51:47.282+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'path': '/admin/test-user'
+      'permissions': 8
+      jcr:uuid: '9f9db4c8-0180-474b-8b68-c25ba3a79595'
+      mgnl:created: 2018-05-12T18:51:47.283+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.283+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '00': 
+      'path': '/admin/test-user/email'
+      'permissions': 63
+      jcr:uuid: '62cb3c8b-2387-4252-a5e2-67c486075054'
+      mgnl:created: 2018-05-12T18:51:47.284+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.284+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '01': 
+      'path': '/admin/test-user/language'
+      'permissions': 63
+      jcr:uuid: 'ef9ff184-48f8-4bc5-a63b-bf5089b7f9e3'
+      mgnl:created: 2018-05-12T18:51:47.285+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.285+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '02': 
+      'path': '/admin/test-user/lastaccess'
+      'permissions': 63
+      jcr:uuid: '3b27dc77-00b7-415c-9fb1-0803a0b1e2e1'
+      mgnl:created: 2018-05-12T18:51:47.287+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.287+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '03': 
+      'path': '/admin/test-user/pswd'
+      'permissions': 63
+      jcr:uuid: '5bf4de96-eb3e-4d04-9416-4a32c46d926a'
+      mgnl:created: 2018-05-12T18:51:47.288+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.288+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '04': 
+      'path': '/admin/test-user/title'
+      'permissions': 63
+      jcr:uuid: 'aa1b2cc2-999a-4f5a-b1c3-dcbc6cb26a34'
+      mgnl:created: 2018-05-12T18:51:47.289+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.289+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '05': 
+      'path': '/admin/test-user/timezone'
+      'permissions': 63
+      jcr:uuid: 'd2b38634-7d2f-4498-bca8-01493b3789f3'
+      mgnl:created: 2018-05-12T18:51:47.290+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-12T18:51:47.290+02:00
+      mgnl:lastModifiedBy: 'superuser'
+  'roles': 
+    '0': 'c480d3b9-2072-442a-968f-39ade2407ba9'
+    jcr:uuid: 'be5d97c4-2ddf-4dbd-9244-6edea0893429'
+
+
