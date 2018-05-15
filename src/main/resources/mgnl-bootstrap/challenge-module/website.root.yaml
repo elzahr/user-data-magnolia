@@ -1,0 +1,372 @@
+'root': 
+  'hideInNav': false
+  'title': 'Test Root'
+  jcr:primaryType: 'mgnl:page'
+  jcr:uuid: '6ffd6008-0996-44e9-bbdd-7132bf37827f'
+  mgnl:created: 2018-05-13T12:04:54.220+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastModified: 2018-05-15T22:31:50.955+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'mtk:pages/basic'
+  'main': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: '847cb423-0efe-4107-a086-872b00592aaf'
+    mgnl:created: 2018-05-13T12:30:20.491+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-15T22:30:49.048+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '4f27f363-f026-4245-8a8c-7467b255b2a0'
+      mgnl:created: 2018-05-15T22:30:49.049+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:30:49.049+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'user-data-magnolia:components/userData'
+  'footer': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: 'f03d5798-9393-428b-9e9c-90076e5af7f8'
+    mgnl:created: 2018-05-13T12:30:20.580+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-13T12:30:20.580+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'external': 
+    'hideInNav': false
+    'title': 'External Pages'
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: '1c5dd5ae-cac5-4631-a493-386772b098e7'
+    mgnl:created: 2018-05-15T22:47:27.536+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-15T22:47:27.536+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'mtk:pages/basic'
+    'login': 
+      'hideInNav': false
+      'title': 'Login'
+      jcr:primaryType: 'mgnl:page'
+      jcr:uuid: 'a505c1ce-c567-4d48-b9bb-2e4ee9643065'
+      mgnl:created: 2018-05-15T22:39:15.009+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:47:32.734+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'mtk:pages/basic'
+      'main': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '09ec6029-ab22-45f8-b489-01754d8d29f8'
+        mgnl:created: 2018-05-15T22:39:18.396+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2018-05-15T22:39:39.279+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        '0': 
+          jcr:primaryType: 'mgnl:component'
+          jcr:uuid: 'fd920584-3853-4bda-a253-6bf6d4f4395c'
+          mgnl:created: 2018-05-15T22:39:39.279+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastModified: 2018-05-15T22:39:39.279+02:00
+          mgnl:lastModifiedBy: 'superuser'
+          mgnl:template: 'public-user-registration:components/login'
+      'footer': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '76e85a5e-17e6-49cf-a5b0-2368d34a1918'
+        mgnl:created: 2018-05-15T22:39:18.418+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2018-05-15T22:39:18.418+02:00
+        mgnl:lastModifiedBy: 'superuser'
+    'register': 
+      'hideInNav': false
+      'title': 'Register'
+      jcr:primaryType: 'mgnl:page'
+      jcr:uuid: '04b8a8b1-e0b4-4257-82cb-b038c6bbb1eb'
+      mgnl:created: 2018-05-15T22:31:40.085+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:47:34.395+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'mtk:pages/basic'
+      'main': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'd9cde7be-5787-43c7-9000-2ebe87a8f6e5'
+        mgnl:created: 2018-05-15T22:32:01.039+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        '0': 
+          'confirmContentType': 'text'
+          'contentType': 'text'
+          'displayStepNavigation': false
+          'errorTitle': 'Registration problem :('
+          'requiredSymbol': '*'
+          'sendConfirmation': false
+          'successTitle': 'User registered!'
+          'trackMail': false
+          jcr:primaryType: 'mgnl:component'
+          jcr:uuid: 'c2f10638-3e3c-4b6c-b7f0-05e17e7266db'
+          mgnl:created: 2018-05-15T22:32:39.401+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+          mgnl:lastModifiedBy: 'superuser'
+          mgnl:template: 'public-user-registration:components/registration'
+          'fieldsets': 
+            jcr:primaryType: 'mgnl:area'
+            jcr:uuid: '3c344eaa-6a6f-4730-b702-2575e9ec5969'
+            mgnl:created: 2018-05-15T22:32:39.553+02:00
+            mgnl:createdBy: 'superuser'
+            mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+            mgnl:lastModifiedBy: 'superuser'
+            '0': 
+              jcr:primaryType: 'mgnl:component'
+              jcr:uuid: '439f69f1-c716-45b0-aa30-10f314619a4d'
+              mgnl:created: 2018-05-15T22:32:48.529+02:00
+              mgnl:createdBy: 'superuser'
+              mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+              mgnl:lastModifiedBy: 'superuser'
+              mgnl:template: 'form:components/formGroupFields'
+              'fields': 
+                jcr:primaryType: 'mgnl:area'
+                jcr:uuid: '4bf470c5-2227-496d-ab95-231b79f4ac92'
+                mgnl:created: 2018-05-15T22:32:48.621+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+                mgnl:lastModifiedBy: 'superuser'
+                '0': 
+                  'autocomplete': false
+                  'autofocus': false
+                  'controlName': 'username'
+                  'disabled': false
+                  'inputType': 'text'
+                  'mandatory': true
+                  'readonly': false
+                  'rows': 1
+                  'title': 'username'
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: '7f43cc00-8cb9-4772-bf22-f30163324464'
+                  mgnl:created: 2018-05-15T22:35:03.704+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:35:12.504+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formEdit'
+                '00': 
+                  'autocomplete': false
+                  'autofocus': false
+                  'controlName': 'password'
+                  'disabled': false
+                  'inputType': 'password'
+                  'mandatory': true
+                  'readonly': false
+                  'rows': 1
+                  'title': 'password'
+                  'validation': ['password']
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: '0a0a8517-f133-45b4-b7c5-e3b7271c3175'
+                  mgnl:created: 2018-05-15T22:35:31.728+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:35:31.728+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formEdit'
+                '01': 
+                  'autocomplete': false
+                  'autofocus': false
+                  'controlName': 'passwordConfirmation'
+                  'disabled': false
+                  'inputType': 'password'
+                  'mandatory': true
+                  'readonly': false
+                  'rows': 1
+                  'title': 'passwordConfirmation'
+                  'validation': ['password']
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: 'b679cc04-694e-475d-9d21-aede1faefbbd'
+                  mgnl:created: 2018-05-15T22:35:56.480+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:35:56.480+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formEdit'
+                '02': 
+                  'autocomplete': false
+                  'autofocus': false
+                  'controlName': 'fullName'
+                  'disabled': false
+                  'inputType': 'text'
+                  'mandatory': false
+                  'readonly': false
+                  'rows': 1
+                  'title': 'fullName'
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: '1a81a211-9097-42c5-8900-c799c45f6d56'
+                  mgnl:created: 2018-05-15T22:36:19.184+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:36:19.184+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formEdit'
+                '03': 
+                  'autocomplete': false
+                  'autofocus': false
+                  'controlName': 'email'
+                  'disabled': false
+                  'inputType': 'text'
+                  'mandatory': false
+                  'readonly': false
+                  'rows': 1
+                  'title': 'email'
+                  'validation': ['email']
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: '4e99eac7-bc52-4809-b80d-474acf12ad3b'
+                  mgnl:created: 2018-05-15T22:36:37.257+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:36:37.257+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formEdit'
+                '04': 
+                  'buttonText': 'register'
+                  'cancelButtonText': 'cancel'
+                  jcr:primaryType: 'mgnl:component'
+                  jcr:uuid: '8fc5d0b6-2a70-4981-9d37-dacc898067bd'
+                  mgnl:created: 2018-05-15T22:36:56.106+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:36:56.219+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+                  mgnl:template: 'form:components/formSubmit'
+                  'conditionList': 
+                    jcr:primaryType: 'mgnl:area'
+                    jcr:uuid: 'a87875da-d9a6-4930-9b98-1312145b054d'
+                    mgnl:created: 2018-05-15T22:36:56.225+02:00
+                    mgnl:createdBy: 'superuser'
+                    mgnl:lastModified: 2018-05-15T22:36:56.225+02:00
+                    mgnl:lastModifiedBy: 'superuser'
+      'footer': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '57c37585-d9a1-4e91-b42f-3c9bdc5f0d6d'
+        mgnl:created: 2018-05-15T22:32:01.068+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2018-05-15T22:32:01.068+02:00
+        mgnl:lastModifiedBy: 'superuser'
+  'profile': 
+    'hideInNav': false
+    'title': 'User Profile'
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: '61e0766d-e263-43b1-9639-0688026841f1'
+    mgnl:created: 2018-05-15T22:44:51.810+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-15T22:47:39.208+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'mtk:pages/basic'
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '2f28cccb-1fe0-4978-998c-20af825e6776'
+      mgnl:created: 2018-05-15T22:44:56.501+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        'confirmContentType': 'text'
+        'contentType': 'text'
+        'displayStepNavigation': false
+        'requiredSymbol': '*'
+        'sendConfirmation': false
+        'trackMail': false
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '07a1b4f3-4edc-4b5e-8e33-7d314aec16a2'
+        mgnl:created: 2018-05-15T22:45:12.577+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'public-user-registration:components/userUpdate'
+        'fieldsets': 
+          jcr:primaryType: 'mgnl:area'
+          jcr:uuid: 'cdacd3d3-c623-4cb1-81e0-89eeae80a836'
+          mgnl:created: 2018-05-15T22:45:12.661+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+          mgnl:lastModifiedBy: 'superuser'
+          '0': 
+            jcr:primaryType: 'mgnl:component'
+            jcr:uuid: '0d0be95a-be36-431e-9e3d-4c4b081a139d'
+            mgnl:created: 2018-05-15T22:45:16.807+02:00
+            mgnl:createdBy: 'superuser'
+            mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+            mgnl:lastModifiedBy: 'superuser'
+            mgnl:template: 'form:components/formGroupFields'
+            'fields': 
+              jcr:primaryType: 'mgnl:area'
+              jcr:uuid: '5430ea31-5874-4914-9e0f-0eefd8d603fe'
+              mgnl:created: 2018-05-15T22:45:16.892+02:00
+              mgnl:createdBy: 'superuser'
+              mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+              mgnl:lastModifiedBy: 'superuser'
+              '0': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'username'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title': 'username'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: 'c4cc8523-73ee-4bab-8780-c38cc3fc57d3'
+                mgnl:created: 2018-05-15T22:45:36.887+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastModified: 2018-05-15T22:45:36.887+02:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '00': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'username'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title': 'username'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '0cd4b23d-e26f-4224-944e-d6ee8d6f40fc'
+                mgnl:created: 2018-05-15T22:45:53.434+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastModified: 2018-05-15T22:45:53.434+02:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '01': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'email'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title': 'email'
+                'validation': ['email']
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '1091db18-1d1e-4444-8d4d-d6fc4b138403'
+                mgnl:created: 2018-05-15T22:46:06.216+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastModified: 2018-05-15T22:46:12.586+02:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '02': 
+                'buttonText': 'Save'
+                'cancelButtonText': 'Cancel'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '9b9183b4-c554-4968-9f36-c4fbd34372ad'
+                mgnl:created: 2018-05-15T22:46:30.105+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastModified: 2018-05-15T22:46:30.211+02:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formSubmit'
+                'conditionList': 
+                  jcr:primaryType: 'mgnl:area'
+                  jcr:uuid: '3def44d0-c8a2-4f75-896b-01ee8df73dd5'
+                  mgnl:created: 2018-05-15T22:46:30.214+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastModified: 2018-05-15T22:46:30.214+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'd82da668-4457-49bd-bfd9-43a585cbfcbc'
+      mgnl:created: 2018-05-15T22:44:56.518+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:44:56.518+02:00
+      mgnl:lastModifiedBy: 'superuser'
+
+

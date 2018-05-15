@@ -1,0 +1,82 @@
+'anonymous': 
+  jcr:primaryType: 'mgnl:role'
+  jcr:uuid: 'd98728c7-b80f-444d-bfda-b54b28dc240c'
+  mgnl:activationStatus: true
+  mgnl:created: 2006-05-04T17:05:39.645+02:00
+  mgnl:lastActivated: 2013-10-21T13:34:39.486+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2018-05-15T22:51:58.932+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: ''
+  'acl_dam': 
+    jcr:uuid: '51db7d40-c71e-4933-bacc-d21f5f921754'
+    mgnl:lastModified: 2018-05-15T22:51:58.902+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'path': '/*'
+      'permissions': 8
+      jcr:uuid: '8bd1826a-1146-4071-a45c-9caf0ec75093'
+      mgnl:created: 2018-05-15T22:51:58.902+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.902+02:00
+      mgnl:lastModifiedBy: 'superuser'
+  'acl_uri': 
+    jcr:uuid: '563cf8eb-9455-4785-8290-6f59036b3bc4'
+    mgnl:lastModified: 2018-05-15T22:51:58.932+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'path': '/.magnolia*'
+      'permissions': 0
+      jcr:uuid: 'cf07373e-f70f-4651-ba2d-787ef637a390'
+      mgnl:created: 2018-05-15T22:51:58.932+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.932+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '00': 
+      'path': '/root/external*'
+      'permissions': 63
+      jcr:uuid: '7aeec019-64d3-4554-a87c-d7eb2968b070'
+      mgnl:created: 2018-05-15T22:51:58.932+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.932+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    '01': 
+      'path': '/*'
+      'permissions': 0
+      jcr:uuid: '2fd53e2c-727e-4bc7-8d0f-e1ea3bf6f8ca'
+      mgnl:created: 2018-05-15T22:51:58.932+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.932+02:00
+      mgnl:lastModifiedBy: 'superuser'
+  'acl_website': 
+    jcr:uuid: '177f2f3e-f234-4129-8a34-db2810e2dd25'
+    mgnl:lastModified: 2018-05-15T22:51:58.896+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'path': '/*'
+      'permissions': 8
+      jcr:uuid: 'ad2bf231-ad79-4065-9262-ff069c137c2a'
+      mgnl:created: 2018-05-15T22:51:58.896+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.896+02:00
+      mgnl:lastModifiedBy: 'superuser'
+  'acl_mgnlVersion': 
+    jcr:uuid: 'e17a88cc-b1d5-4be7-b4c4-b3da6a26ce45'
+  'acl_mgnlSystem': 
+    jcr:uuid: '6d5d1a0b-b0e6-4ce0-9f4b-03a62e076981'
+  'acl_resources': 
+    jcr:uuid: 'beebc8a4-9bd8-4b1a-9a3a-bf1d66e97cf8'
+    mgnl:created: 2018-05-12T18:47:06.101+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-05-15T22:51:58.908+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'path': '/*'
+      'permissions': 8
+      jcr:uuid: '86fefcfd-61fa-4729-86b0-a484afc02125'
+      mgnl:created: 2018-05-15T22:51:58.908+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-05-15T22:51:58.908+02:00
+      mgnl:lastModifiedBy: 'superuser'
+
+
