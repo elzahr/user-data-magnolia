@@ -1,6 +1,6 @@
 package elzahr.magnolia.config;
 
-import elzahr.magnolia.userdata.UserData;
+import elzahr.magnolia.userdata.UserDataProvider;
 import info.magnolia.cms.beans.config.VirtualURIMapping;
 import info.magnolia.module.blossom.annotation.Area;
 import info.magnolia.module.blossom.annotation.DialogFactory;
@@ -10,10 +10,6 @@ import info.magnolia.module.blossom.preexecution.BlossomHandlerMapping;
 import info.magnolia.module.blossom.view.UuidRedirectViewResolver;
 import info.magnolia.module.blossom.web.BlossomHandlerMethodArgumentResolver;
 import info.magnolia.module.blossom.web.BlossomRequestMappingHandlerAdapter;
-
-import java.util.Collections;
-
-import info.magnolia.objectfactory.Components;
 import org.springframework.context.annotation.*;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.bind.support.ConfigurableWebBindingInitializer;
@@ -22,6 +18,8 @@ import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+
+import java.util.Collections;
 
 /**
  * Configuration class for the blossom servlet housing templates and beans used to render them.
@@ -111,19 +109,9 @@ public class BlossomServletConfiguration {
         return resolver;
     }
 
-//    @Bean
-//    @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
-//    public UserData getUserData() throws Node2BeanException, RepositoryException {
-//        User user = MgnlContext.getUser();
-//        if(user != null) {
-//            String userId = user.getName();
-//            return UserData.getUserData(userId);
-//        }
-//        return null;
-//    }
-
     @Bean
-    public UserData getUserData() {
-        return Components.getComponent(UserData.class);
+    public UserDataProvider getUserDataProvider() {
+        return new UserDataProvider();
     }
+
 }

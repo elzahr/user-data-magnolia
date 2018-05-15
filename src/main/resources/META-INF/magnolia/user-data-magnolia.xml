@@ -11,15 +11,6 @@
   <!-- For more information on module descriptor configuration options -->
   <!-- https://documentation.magnolia-cms.com/display/DOCS/XML-based+module+descriptor -->
 
-  <components>
-    <id>main-data</id>
-    <component>
-      <type>elzahr.magnolia.userdata.UserData</type>
-      <provider>elzahr.magnolia.userdata.UserData.InstanceFactory</provider>
-      <scope>session</scope>
-    </component>
-  </components>
-
   <dependencies>
     <dependency>
       <name>core</name>

@@ -3,42 +3,26 @@ package elzahr.magnolia.userdata;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.jcr.node2bean.Node2BeanException;
 import info.magnolia.jcr.node2bean.Node2BeanProcessor;
-import info.magnolia.jcr.node2bean.TransformationState;
-import info.magnolia.jcr.node2bean.impl.Node2BeanTransformerImpl;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.jcr.util.PropertyUtil;
-import info.magnolia.objectfactory.ComponentProvider;
 import info.magnolia.objectfactory.Components;
-import info.magnolia.objectfactory.ObservedComponentFactory;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class UserData implements Serializable {
     public static final String WORKSPACE_NAME = "users-public-data";
-    String userid;
-    Set<DataUnit> dataUnitSet;
-
-    public UserData(String userid) {
-        this.userid = userid;
-        dataUnitSet = new HashSet<>();
-    }
+    private String userid;
+    private Set<DataUnit> dataUnitSet;
 
     public void saveData() throws RepositoryException {
         Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
-        String userNodePath = "/" + userid;
-        Node userNode = null;
-        if(!session.nodeExists(userNodePath)) {
-            userNode = NodeUtil.createPath(session.getRootNode(), userNodePath, NodeTypes.Content.NAME);
-        } else {
-            userNode = session.getNode(userNodePath);
-        }
+        Node userNode = getUserNode(userid, session);
+
         for(DataUnit dataUnit: dataUnitSet) {
             Node dataNode = NodeUtil.createPath(userNode, dataUnit.getName(), NodeTypes.Content.NAME);
             PropertyUtil.setProperty(dataNode, "name", dataUnit.getName());
@@ -49,34 +33,26 @@ public class UserData implements Serializable {
         session.save();
     }
 
-//    public static UserData getUserData(String userid) throws RepositoryException, Node2BeanException {
-//        Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
-//        String userNodePath = "/" + userid;
-//
-//        if(session.nodeExists(userNodePath)) {
-//            Node userNode = session.getNode(userNodePath);
-//            Node2BeanProcessor node2BeanProcessor = Components.getComponent(Node2BeanProcessor.class);
-//            UserData userData = (UserData) node2BeanProcessor.toBean(userNode, UserData.class);
-//            return userData;
-//        }
-//
-//        return new UserData(userid);
-//    }
+    public static UserData getUserData(String userid) throws RepositoryException, Node2BeanException {
+        Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
+        Node userNode = getUserNode(userid, session);
+        Node2BeanProcessor node2BeanProcessor = Components.getComponent(Node2BeanProcessor.class);
+        UserData userData = (UserData) node2BeanProcessor.toBean(userNode);
+        return userData;
+    }
 
-    public static final class InstanceFactory extends ObservedComponentFactory<UserData> {
-        public InstanceFactory() {
-            super(WORKSPACE_NAME, "/" + MgnlContext.getUser().getName(), UserData.class);
+    private static Node getUserNode(String userid, Session session) throws RepositoryException {
+        String userNodePath = "/" + userid;
+        Node userNode;
+        if(!session.nodeExists(userNodePath)) {
+            userNode = NodeUtil.createPath(session.getRootNode(), userNodePath, NodeTypes.Content.NAME);
+            PropertyUtil.setProperty(userNode, "class", UserData.class.getName());
+            PropertyUtil.setProperty(userNode, "userid", userid);
+            session.save();
+        } else {
+            userNode = session.getNode(userNodePath);
         }
-
-        @Override
-        protected UserData transformNode(Node node) throws Node2BeanException, RepositoryException {
-            return (UserData) Components.getComponent(Node2BeanProcessor.class).toBean(node, false, new Node2BeanTransformerImpl() {
-                @Override
-                public Object newBeanInstance(TransformationState state, Map properties, ComponentProvider componentProvider) {
-                    return new UserData(MgnlContext.getUser().getName());
-                }
-            }, Components.getComponentProvider());
-        }
+        return userNode;
     }
 
     public String getUserid() {
