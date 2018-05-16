@@ -7,6 +7,7 @@ import info.magnolia.module.blossom.annotation.Template;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.jcr.RepositoryException;
 
@@ -18,17 +19,16 @@ public class UserDataComponent {
     UserDataProvider userDataProvider;
 
     @RequestMapping("/userData")
-    public String render() {
-        UserData userData = null;
+    public ModelAndView render() {
+        ModelAndView view = new ModelAndView("components/userData.ftl");
         try {
-            userData = userDataProvider.getUserData();
-            userData.getDataUnitSet();
+            UserData userData = userDataProvider.getUserData();
+            view.addObject("userData", userData);
         } catch (Node2BeanException e) {
             e.printStackTrace();
         } catch (RepositoryException e) {
             e.printStackTrace();
         }
-
-        return "components/userData.ftl";
+        return view;
     }
 }

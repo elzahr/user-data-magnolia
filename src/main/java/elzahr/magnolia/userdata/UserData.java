@@ -1,73 +1,71 @@
 package elzahr.magnolia.userdata;
 
-import info.magnolia.context.MgnlContext;
-import info.magnolia.jcr.node2bean.Node2BeanException;
-import info.magnolia.jcr.node2bean.Node2BeanProcessor;
-import info.magnolia.jcr.util.NodeTypes;
-import info.magnolia.jcr.util.NodeUtil;
-import info.magnolia.jcr.util.PropertyUtil;
-import info.magnolia.objectfactory.Components;
+import info.magnolia.module.publicuserregistration.UserProfile;
 
-import javax.jcr.Node;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
 import java.io.Serializable;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
-public class UserData implements Serializable {
-    public static final String WORKSPACE_NAME = "users-public-data";
-    private String userid;
-    private Set<DataUnit> dataUnitSet;
+public class UserData extends UserProfile implements Serializable {
 
-    public void saveData() throws RepositoryException {
-        Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
-        Node userNode = getUserNode(userid, session);
+    private Map<String, DataUnit> dataUnitSet;
 
-        for(DataUnit dataUnit: dataUnitSet) {
-            Node dataNode = NodeUtil.createPath(userNode, dataUnit.getName(), NodeTypes.Content.NAME);
-            PropertyUtil.setProperty(dataNode, "name", dataUnit.getName());
-            PropertyUtil.setProperty(dataNode, "value", dataUnit.getValue());
-            PropertyUtil.setProperty(dataNode, "expirationDate", dataUnit.getExpiration());
-        }
-
-        session.save();
+    public UserData() {
+        dataUnitSet = new HashMap<>();
+        dataUnitSet.put(UserProfile.PASSWORD, new DataUnit(getUsername()));
+        dataUnitSet.put(UserProfile.FULLNAME, new DataUnit(getUsername()));
+        dataUnitSet.put(UserProfile.EMAIL, new DataUnit(getUsername()));
     }
 
-    public static UserData getUserData(String userid) throws RepositoryException, Node2BeanException {
-        Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
-        Node userNode = getUserNode(userid, session);
-        Node2BeanProcessor node2BeanProcessor = Components.getComponent(Node2BeanProcessor.class);
-        UserData userData = (UserData) node2BeanProcessor.toBean(userNode);
-        return userData;
-    }
+    //    public void saveData() throws RepositoryException {
+//        Session session = MgnlContext.getJCRSession(WORKSPACE_NAME);
+//        Node userNode = getUserNode(getUsername(), session);
+//
+//        for(DataUnit dataUnit: dataUnitSet.values()) {
+//            Node dataNode = NodeUtil.createPath(userNode, dataUnit.getName(), NodeTypes.Content.NAME);
+//            PropertyUtil.setProperty(dataNode, "name", dataUnit.getName());
+//            PropertyUtil.setProperty(dataNode, "value", dataUnit.getDataValue());
+//            PropertyUtil.setProperty(dataNode, "expirationDate", dataUnit.getExpiration());
+//        }
+//
+//        session.save();
+//    }
 
-    private static Node getUserNode(String userid, Session session) throws RepositoryException {
-        String userNodePath = "/" + userid;
-        Node userNode;
-        if(!session.nodeExists(userNodePath)) {
-            userNode = NodeUtil.createPath(session.getRootNode(), userNodePath, NodeTypes.Content.NAME);
-            PropertyUtil.setProperty(userNode, "class", UserData.class.getName());
-            PropertyUtil.setProperty(userNode, "userid", userid);
-            session.save();
-        } else {
-            userNode = session.getNode(userNodePath);
-        }
-        return userNode;
-    }
-
-    public String getUserid() {
-        return userid;
-    }
-
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
-
-    public Set<DataUnit> getDataUnitSet() {
+    public Map<String, DataUnit> getDataUnitSet() {
         return dataUnitSet;
     }
 
-    public void setDataUnitSet(Set<DataUnit> dataUnitSet) {
+    public void setDataUnitSet(Map<String, DataUnit> dataUnitSet) {
         this.dataUnitSet = dataUnitSet;
+    }
+
+    @Override
+    public String getPassword() {
+        return dataUnitSet.get(UserProfile.PASSWORD).getDataValue();
+    }
+
+    @Override
+    public String getEmail() {
+        return dataUnitSet.get(UserProfile.EMAIL).getDataValue();
+    }
+
+    @Override
+    public String getFullName() {
+        return dataUnitSet.get(UserProfile.FULLNAME).getDataValue();
+    }
+
+    @Override
+    public void setPassword(String password) {
+        dataUnitSet.get(UserProfile.PASSWORD).setDataValue(password);
+    }
+
+    @Override
+    public void setEmail(String email) {
+        dataUnitSet.get(UserProfile.EMAIL).setDataValue(email);
+    }
+
+    @Override
+    public void setFullName(String fullName) {
+        dataUnitSet.get(UserProfile.FULLNAME).setDataValue(fullName);
     }
 }

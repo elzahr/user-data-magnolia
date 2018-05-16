@@ -3,7 +3,7 @@ package elzahr.magnolia;
 import info.magnolia.module.ModuleLifecycle;
 import info.magnolia.module.ModuleLifecycleContext;
 import info.magnolia.module.blossom.module.BlossomModuleSupport;
-import elzahr.magnolia.config.ChallengeModuleConfiguration;
+import elzahr.magnolia.config.UserDataModuleConfiguration;
 import elzahr.magnolia.config.BlossomServletConfiguration;
 
 /**
@@ -12,13 +12,13 @@ import elzahr.magnolia.config.BlossomServletConfiguration;
  * outside world. A request will never reach this servlet directly. It is only accessed by Magnolia to render the
  * templates, areas and components and display the dialogs managed by the servlet.
  */
-public class ChallengeModule extends BlossomModuleSupport implements ModuleLifecycle {
+public class UserDataModule extends BlossomModuleSupport implements ModuleLifecycle {
 
     public void start(ModuleLifecycleContext moduleLifecycleContext) {
         if (moduleLifecycleContext.getPhase() == ModuleLifecycleContext.PHASE_SYSTEM_STARTUP) {
 
             // Using Spring java config
-            super.initRootWebApplicationContext(ChallengeModuleConfiguration.class);
+            super.initRootWebApplicationContext(UserDataModuleConfiguration.class);
             super.initBlossomDispatcherServlet("blossom", BlossomServletConfiguration.class);
 
 /*

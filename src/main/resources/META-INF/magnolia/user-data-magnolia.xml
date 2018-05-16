@@ -4,12 +4,19 @@
   <name>user-data-magnolia</name>
   <displayName>${project.name}</displayName>
   <description>${project.description}</description>
-  <class>elzahr.magnolia.ChallengeModule</class>
-  <versionHandler>elzahr.magnolia.setup.ChallengeModuleVersionHandler</versionHandler>
+  <class>elzahr.magnolia.UserDataModule</class>
+  <versionHandler>elzahr.magnolia.setup.UserDataModuleVersionHandler</versionHandler>
   <version>${project.version}</version>
 
   <!-- For more information on module descriptor configuration options -->
   <!-- https://documentation.magnolia-cms.com/display/DOCS/XML-based+module+descriptor -->
+
+  <properties>
+    <property>
+      <name>info.magnolia.module.publicuserregistration.UserRegistrar</name>
+      <value>elzahr.magnolia.userdata.UserDataRegistrar</value>
+    </property>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -39,6 +46,10 @@
     <dependency>
       <name>blossom</name>
       <version>${blossomVersion}/*</version>
+    </dependency>
+    <dependency>
+      <name>public-user-registration</name>
+      <version>*</version>
     </dependency>
   </dependencies>
 
